@@ -25,7 +25,7 @@ timezone = pytz.timezone('America/Mexico_City')
 
 MongoObject = MongoClient()
 RedisObject = RedisClient()
-
+#clera
 # CLIENT CONNECTORS
 mongo_conn = MongoObject.mongo_client
 redis_conn = RedisObject.redis_client
@@ -75,7 +75,7 @@ def phone_number():
     phone_number = request.json['phone_number']
 
     # VALIDATING LENGTH OF NUMBER
-    if len(phone_number) != 10:
+    if len(phone_number) != 10 and phone_number.isnumeric():
         return ({'message': 'The number entered does not have 10 digits'})
 
     # VALIDATE THAT THERE IS AN ACTIVE SESSION
