@@ -64,12 +64,6 @@ def token_required(f):
 
 @phone_bp.route('/phone_number', methods=['POST'])
 def phone_number():
-    '''
-    Expose an endpoint that 
-    receives a valid phone 
-    number (10 digits)
-    '''
-
 
     # REQUEST DATA
     phone_number = request.json['phone_number']
